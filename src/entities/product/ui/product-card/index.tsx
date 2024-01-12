@@ -2,20 +2,7 @@ import styles from './styles.module.css'
 import Button from "../../../../shared/ui/Button/Button";
 import {ReactComponent as Cart} from "../../../../shared/images/shopping_cart.svg";
 import {ReactComponent as Favorite} from "../../../../shared/images/favorite.svg"
-
-export interface Product {
-    id: number,
-    title: string,
-    description: string,
-    price: number,
-    discountPercentage: number,
-    rating: number,
-    stock: 94,
-    brand: string,
-    category: string,
-    thumbnail: string,
-    images: string[],
-}
+import {Product} from "../../../../shared/api/types";
 
 interface Props {
     product: Product
