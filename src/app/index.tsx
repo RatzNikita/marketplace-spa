@@ -1,7 +1,6 @@
 import React from 'react';
-import './App.css';
-import ProductCard from './entities/ProductCard';
-import { Product } from './entities/ProductCard';
+import './index.css';
+import ProductCard, {Product} from 'entities/product/ui';
 
 const stubProduct: Product = {
   id: 1,
