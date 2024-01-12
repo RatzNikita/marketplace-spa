@@ -1,0 +1,11 @@
+@import url('./fonts/roboto.css');
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #b9b9b9;
+  padding: 50px 10px;
+}
+
