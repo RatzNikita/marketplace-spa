@@ -21,7 +21,7 @@ const Button = styled.button<{ primary?: boolean; }>`
   box-shadow: #383838 0 0 3px;
 
   &:hover {
-    color: #368dff;
+    color: dodgerblue;
     transform: scale(1.05);
   }
 `
