@@ -1,6 +1,11 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
-const Button = styled.button<{ primary?: boolean; }>`
+const Button = styled.button<{
+    primary?: boolean;
+    variant?: 'text' | 'default',
+    color?: 'primary' | 'secondary',
+    size?: 'm' | 'l'
+}>`
   background: linear-gradient(225deg, rgb(159, 159, 159) 0%, rgb(243, 243, 243) 100%);
   font-family: Roboto, sans-serif;
   display: flex;
@@ -13,13 +18,22 @@ const Button = styled.button<{ primary?: boolean; }>`
   padding: 5px;
   font-weight: 400;
   border-radius: 12px;
-  max-width: 80px;
   max-height: 40px;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: ${(p) =>
+          p.size ==='l' ? '1.5rem' : '1rem'};
+
   transition: all .2s;
   box-shadow: #383838 0 0 3px;
 
+  ${(p) => p.variant === 'text' && css`
+    background: none;
+    box-shadow: none;
+  `}
+  ${(p) =>
+          p.color === 'secondary' && css`
+            color: #b0b0b0;
+          `}
   &:hover {
     color: dodgerblue;
     transform: scale(1.05);

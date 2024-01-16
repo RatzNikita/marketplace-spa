@@ -1,0 +1,31 @@
+.container {
+	display: flex;
+	flex-direction: row;
+	padding: 10px 5px;
+	border-bottom: #b8b8b8 2px solid;
+	margin-bottom: 25px;
+	align-items: end;
+}
+
+.title {
+	font-size: 3rem;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient( 180deg, #ffffff, #849cf8);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-transform: uppercase;
+	letter-spacing: 7px;
+}
+
+.navigation {
+	padding: 0 40px;
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+}
+
+.navlink {
+	text-decoration: none;
+}
+

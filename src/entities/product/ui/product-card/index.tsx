@@ -1,5 +1,5 @@
 import styles from './styles.module.css'
-import Button from "../../../../shared/ui/Button/Button";
+import Button from "../../../../shared/ui/Button";
 import {ReactComponent as Cart} from "../../../../shared/images/shopping_cart.svg";
 import {ReactComponent as Favorite} from "../../../../shared/images/favorite.svg"
 import {Product} from "../../../../shared/api/types";
