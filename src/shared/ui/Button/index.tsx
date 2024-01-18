@@ -4,13 +4,15 @@ const Button = styled.button<{
     primary?: boolean;
     variant?: 'text' | 'default',
     color?: 'primary' | 'secondary',
-    size?: 'm' | 'l'
+    size?: 'm' | 'l',
+    active?: boolean
 }>`
-  background: linear-gradient(225deg, rgb(159, 159, 159) 0%, rgb(243, 243, 243) 100%);
+  background: white;
   font-family: Roboto, sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
   border: none;
   color: #4a4a4a;
@@ -33,6 +35,11 @@ const Button = styled.button<{
   ${(p) =>
           p.color === 'secondary' && css`
             color: #b0b0b0;
+          `}
+  ${(p) =>
+          p.active  && css`
+            text-decoration: underline;
+    transform: scale(1.05);
           `}
   &:hover {
     color: dodgerblue;

@@ -1,6 +1,5 @@
 import styles from './styles.module.css'
-import {NavLink} from "react-router-dom";
-import Button from "shared/ui/Button";
+import {NavButton} from "entities/header";
 
 function Header() {
 
@@ -8,10 +7,10 @@ function Header() {
         <header className={styles.container}>
             <h1 className={styles.title}>[Marketplace]</h1>
             <nav className={styles.navigation}>
-                <NavLink to={'/products'} className={styles.navlink}>
-                    <Button variant={'text'} color={'secondary'} size={'l'}>Go shopping</Button>
-                </NavLink>
-
+                <NavButton to={'/news'}>news</NavButton>
+                <NavButton to={'/products'} >goods</NavButton>
+                <NavButton to={'/sale'}>sale</NavButton>
+                <NavButton to={'/cart'}>cart</NavButton>
             </nav>
         </header>
     )
