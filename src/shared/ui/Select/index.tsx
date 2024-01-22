@@ -54,14 +54,16 @@ const CloseButton = styled(Close)`
   display: block;
   margin-left: auto;
   opacity: 0.6;
-    & :hover {
-      color: dodgerblue;
-      opacity: 1;
-    }
+
+  & :hover {
+    color: dodgerblue;
+    opacity: 1;
+  }
 `
 
 const DropdownStyle = styled.div<{ isVisible: boolean }>`
   position: absolute;
+  z-index: 5;
   top: 30px;
   right: 0;
   max-height: 20vmax;
@@ -95,6 +97,17 @@ const DropdownStyle = styled.div<{ isVisible: boolean }>`
   }
 `;
 
+const Overlay = styled.div<{ isVisible: boolean }>`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100vw;
+  height: 100vh;
+  cursor: default;
+  display: ${p => p.isVisible ? 'block' : 'none'};
+`
+
 const DropdownItem = styled.div<{ active: boolean }>`
   display: flex;
   align-items: center;
@@ -125,7 +138,7 @@ interface Props {
 }
 
 
-function Select({label, values, onChange}: Props) {
+function Select({label, values, onChange}: Readonly<Props>) {
     const [currentValue, setCurrentValue] = useState('');
     const [open, setOpen] = useState(false);
 
@@ -150,25 +163,28 @@ function Select({label, values, onChange}: Props) {
 
 
     return (
-        <SelectContainer>
-            <SelectLabel>{label}</SelectLabel>
-            <SelectLabelButton onClick={handleOpen}>
-                {currentValue !== "" ? currentValue : ''}
-                {currentValue && <CloseButton onClick={handleClean}/>}
-                <SelectLabelArrow  open={open}/>
-            </SelectLabelButton>
-            <DropdownStyle isVisible={open}>
-                {values.map((value, index) => (
-                    <DropdownItem
-                        onClick={() => handleChange(value)}
-                        active={value === currentValue}
-                        key={index}
-                    >
-                        {value}
-                    </DropdownItem>
-                ))}
-            </DropdownStyle>
-        </SelectContainer>
+        <>
+            <SelectContainer>
+                <SelectLabel>{label}</SelectLabel>
+                <SelectLabelButton onClick={handleOpen}>
+                    {currentValue !== "" ? currentValue : ''}
+                    {currentValue && <CloseButton onClick={handleClean}/>}
+                    <SelectLabelArrow open={open}/>
+                </SelectLabelButton>
+                <DropdownStyle isVisible={open}>
+                    {values.map((value, index) => (
+                        <DropdownItem
+                            onClick={() => handleChange(value)}
+                            active={value === currentValue}
+                            key={value}
+                        >
+                            {value}
+                        </DropdownItem>
+                    ))}
+                </DropdownStyle>
+            </SelectContainer>
+            <Overlay onClick={handleClose} isVisible={open}/>
+        </>
     );
 }
 
