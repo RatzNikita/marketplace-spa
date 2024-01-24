@@ -34,7 +34,7 @@ const Button = styled.button<{
   `}
   ${(p) =>
           p.color === 'secondary' && css`
-            color: #b0b0b0;
+            color: black;
           `}
   ${(p) =>
           p.active  && css`

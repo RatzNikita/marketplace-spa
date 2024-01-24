@@ -1,0 +1,76 @@
+.button {
+	padding: 10px 5px;
+	cursor: pointer;
+	border: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 1.5rem;
+	color: black;
+	border-radius: 3px;
+	box-shadow: #adadad 0 0 8px;
+	background-color: #ffffff;
+	transition: .25s ease-in-out;
+}
+
+.icon {
+	margin: 5px;
+	width: 35px;
+	height: 25px;
+	position: relative;
+	transform: rotate(0deg);
+	transition: .5s ease-in-out;
+	cursor: pointer;
+}
+
+.icon span {
+	display: block;
+	position: absolute;
+	height: 5px;
+	width: 100%;
+	background: black;
+	border-radius: 9px;
+	opacity: 1;
+	left: 0;
+	transform: rotate(0deg);
+	transition: .25s ease-in-out;
+}
+
+.button:hover {
+	opacity: 0.6;
+}
+
+.icon span:nth-child(1) {
+	top: 0;
+}
+
+.icon span:nth-child(2) {
+	top: 10px;
+}
+
+.icon span:nth-child(3) {
+	top: 20px;
+}
+
+.open {
+	color: dodgerblue;
+}
+
+.open span {
+	background: dodgerblue;
+}
+
+.open span:nth-child(1) {
+	top: 10px;
+	transform: rotate(135deg);
+}
+
+.open span:nth-child(2) {
+	opacity: 0;
+	left: -60px;
+}
+
+.open span:nth-child(3) {
+	top: 10px;
+	transform: rotate(-135deg);
+}
