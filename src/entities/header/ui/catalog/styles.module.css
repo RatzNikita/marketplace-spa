@@ -1,0 +1,31 @@
+@keyframes from-left-to-right {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0%);
+	}
+}
+
+.container {
+	position:absolute;
+	top: 0;
+	left: 0;
+	padding: 0 10px;
+	z-index: 100;
+	min-width: 300px;
+	box-shadow: #4f4f4f 0 10px 10px;
+	height: 100vh;
+	background-color: white;
+	animation: from-left-to-right .15s linear;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	justify-content: center;
+	gap: 5px;
+}
+
+.hidden {
+	animation: from-left-to-right .15s linear ;
+	display: none;
+}
