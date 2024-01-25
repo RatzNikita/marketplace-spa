@@ -1,5 +1,5 @@
 import styles from './styles.module.css';
-import { useAppSelector} from "../../../../app/store";
+import {useAppSelector} from "../../../../app/store";
 import {useGetProductsCategoriesQuery} from "../../../../app/api";
 import Button from "../../../../shared/ui/Button";
 

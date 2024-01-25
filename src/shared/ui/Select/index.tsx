@@ -44,7 +44,7 @@ const SelectLabelButton = styled.button`
 const SelectLabelArrow = styled(ExpandMore)<{ open: boolean }>`
   transition: all 0.2s;
   ${(p) =>
-          p.open && css`
+    p.open && css`
             transform: rotateX(180deg);
           `}
 `
@@ -79,8 +79,8 @@ const DropdownStyle = styled.div<{ isVisible: boolean }>`
   transition: max-height 0.2s ease;
 
   ${(p) =>
-          p.isVisible !== true &&
-          css`
+    p.isVisible !== true &&
+    css`
             max-height: 40px;
             visibility: hidden;
           `}
@@ -119,8 +119,8 @@ const DropdownItem = styled.div<{ active: boolean }>`
   cursor: pointer;
 
   ${(p) =>
-          p.active &&
-          css`
+    p.active &&
+    css`
             color: dodgerblue;
             font-weight: 500;
           `}

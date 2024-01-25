@@ -1,4 +1,3 @@
-import styles from './styles.module.css'
 import {useGetProductsCategoriesQuery} from "app/api";
 import Select from "shared/ui/Select";
 import {useAppDispatch} from "../../../../app/store";

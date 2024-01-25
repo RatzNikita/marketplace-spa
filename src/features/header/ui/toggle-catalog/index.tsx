@@ -1,6 +1,4 @@
-import Button from "../../../../shared/ui/Button";
 import styles from './styles.module.css'
-import {useState} from "react";
 import {useAppDispatch, useAppSelector} from "../../../../app/store";
 import {toggleCatalog} from "../../model/appSlice";
 
@@ -16,7 +14,7 @@ function ToggleCatalog() {
     return (
         <button className={`${styles.button} ${open ? styles.open : ''}`} onClick={handleClick}>
             Catalog
-            <div className={styles.icon} >
+            <div className={styles.icon}>
                 <span/><span/><span/>
             </div>
         </button>

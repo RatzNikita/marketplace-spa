@@ -1,4 +1,4 @@
-import styles from './styles.module.css'
+import styles from './styles.module.scss'
 import Button from "../../../../shared/ui/Button";
 import {ReactComponent as Cart} from "../../../../shared/images/shopping_cart.svg";
 import {ReactComponent as Favorite} from "../../../../shared/images/favorite.svg"
@@ -8,7 +8,7 @@ interface Props {
     product: Product
 }
 
-function ProductCard({product}: Props) {
+function ProductCard({product}: Readonly<Props>) {
     return (
         <article className={styles.container}>
             <img src={product.thumbnail}

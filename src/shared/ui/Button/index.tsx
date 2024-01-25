@@ -23,7 +23,7 @@ const Button = styled.button<{
   max-height: 40px;
   line-height: 1.5;
   font-size: ${(p) =>
-          p.size ==='l' ? '1.5rem' : '1rem'};
+    p.size === 'l' ? '1.5rem' : '1rem'};
 
   transition: all .2s;
   box-shadow: #383838 0 0 3px;
@@ -33,11 +33,11 @@ const Button = styled.button<{
     box-shadow: none;
   `}
   ${(p) =>
-          p.color === 'secondary' && css`
+    p.color === 'secondary' && css`
             color: black;
           `}
   ${(p) =>
-          p.active  && css`
+    p.active && css`
             text-decoration: underline;
     transform: scale(1.05);
           `}

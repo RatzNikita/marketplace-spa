@@ -8,7 +8,7 @@
 }
 
 .container {
-	position:absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	padding: 0 10px;
@@ -26,6 +26,6 @@
 }
 
 .hidden {
-	animation: from-left-to-right .15s linear ;
+	animation: from-left-to-right .15s linear;
 	display: none;
 }

@@ -9,7 +9,7 @@ interface Props {
     children?: React.ReactNode
 }
 
-function NavButton({children,to}: Readonly<Props>) {
+function NavButton({children, to}: Readonly<Props>) {
 
     const {pathname} = useLocation()
 

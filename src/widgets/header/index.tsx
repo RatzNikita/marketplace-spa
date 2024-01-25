@@ -1,6 +1,7 @@
 import styles from './styles.module.css'
-import {Catalog, NavButton} from "entities/header";
-import {ToggleCatalog, ChangeCategory} from "features/header";
+import {NavButton} from "entities/header";
+import {AccountNavigation, ChangeCategory, ToggleCatalog} from "features/header";
+
 
 function Header() {
 
@@ -13,6 +14,7 @@ function Header() {
                 <NavButton to={'/products'}>goods</NavButton>
                 <NavButton to={'/sale'}>sale</NavButton>
                 <NavButton to={'/cart'}>cart</NavButton>
+                <AccountNavigation/>
             </nav>
             <ChangeCategory/>
         </header>

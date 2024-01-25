@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import './index.scss';
 import {Provider} from "react-redux";
 import store from "./store";
 import Header from "widgets/header";
