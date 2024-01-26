@@ -15,7 +15,7 @@ function NavButton({children, to}: Readonly<Props>) {
 
     return (
         <NavLink to={to} className={styles.navlink}>
-            <Button variant={'text'} color={'secondary'} size={'l'} active={pathname === to}>
+            <Button variant={'text'} color={'secondary'} size={'l'} active={(pathname === to)}>
                 {children}
             </Button>
         </NavLink>

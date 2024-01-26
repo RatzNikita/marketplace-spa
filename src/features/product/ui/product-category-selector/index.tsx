@@ -5,7 +5,7 @@ import {setCategory} from "../../model/productSlice";
 import {Suspense} from "react";
 
 
-function ProductCategorySelector() {
+function SelectProductCategory() {
 
     const {data} = useGetProductsCategoriesQuery();
     const dispatch = useAppDispatch()
@@ -26,4 +26,4 @@ function ProductCategorySelector() {
 }
 
 
-export default ProductCategorySelector
+export default SelectProductCategory

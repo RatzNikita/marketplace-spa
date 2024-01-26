@@ -1,11 +1,18 @@
 @import url('shared/fonts/roboto.css');
 
+:root {
+  --darkgrey: #444444;
+  --lightpink: #ec5990;
+  --lightgrey: #adadad;
+}
+
 body {
   font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #ffffff;
   margin: 0 auto;
+  color: var(--darkgrey)
 }
 
 .App {

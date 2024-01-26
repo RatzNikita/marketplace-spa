@@ -1,6 +1,8 @@
 import styles from './styles.module.css'
 import {NavButton} from "entities/header";
 import {AccountNavigation, ChangeCategory, ToggleCatalog} from "features/header";
+import {ReactComponent as ShoppingCart} from "shared/images/shopping_cart.svg";
+import SearchBar from "../../features/header/ui/search";
 
 
 function Header() {
@@ -10,10 +12,10 @@ function Header() {
             <h1 className={styles.title}>[Marketplace]</h1>
             <nav className={styles.navigation}>
                 <ToggleCatalog/>
-                <NavButton to={'/news'}>news</NavButton>
-                <NavButton to={'/products'}>goods</NavButton>
-                <NavButton to={'/sale'}>sale</NavButton>
-                <NavButton to={'/cart'}>cart</NavButton>
+                <SearchBar/>
+                <NavButton to={'/cart'}>
+                    <ShoppingCart/>
+                </NavButton>
                 <AccountNavigation/>
             </nav>
             <ChangeCategory/>

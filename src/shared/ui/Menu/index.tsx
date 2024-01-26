@@ -5,22 +5,23 @@ import {ReactNode, useState} from "react";
 const MenuContainer = styled.div`
   position: relative;
   cursor: pointer;
-  box-shadow: #8a8a8a 0 0 10px;
-  border-radius: 3px;
-  
+  margin:0;
+  padding: 0;
   z-index: 4;
 `
 
-const MenuDropdown = styled.div<{ visible?: boolean }>`
+const MenuDropdown = styled.ul<{ isVisible: boolean }>`
   position: absolute;
   top: 100%;
+  margin: 0;
+  padding: 0;
   width: 100%;
   left: 0;
   background-color: white;
-  display: ${p => p.visible ? 'flex' : 'none'};
+  display: ${p => p.isVisible ? 'flex' : 'none'};
   flex-direction: column;
   z-index: 3;
-  box-shadow: #8a8a8a 0 0 5px;
+  box-shadow: #8a8a8a 0 4px 5px;
 `
 
 interface Props {
@@ -43,7 +44,7 @@ function Menu({children, component}: Readonly<Props>) {
     return (
         <MenuContainer onMouseEnter={handleOpen} onMouseLeave={handleClose}>
             {component}
-            <MenuDropdown visible={open} onClick={handleClose}>
+            <MenuDropdown isVisible={open} onClick={handleClose}>
                 {children}
             </MenuDropdown>
         </MenuContainer>

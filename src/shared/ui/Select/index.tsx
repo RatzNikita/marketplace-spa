@@ -26,8 +26,6 @@ const SelectLabelButton = styled.button`
   min-width: 12rem;
   font-size: 0.9rem;
   font-weight: 500;
-  background-color: #363636;
-  color: #d3d3d3;
   display: flex;
   align-items: center;
   justify-content: end;
@@ -37,7 +35,7 @@ const SelectLabelButton = styled.button`
   transition: 0.3s ease;
 
   &:hover {
-    background-color: #5d5d5d;
+    background-color: #dedede;
   }
 `;
 
@@ -74,27 +72,30 @@ const DropdownStyle = styled.div<{ isVisible: boolean }>`
   text-overflow: ellipsis;
   display: flex;
   flex-direction: column;
-  background-color: #363636;
+  color: var(--darkgrey);
+  background-color: #f1f1f1;
   box-sizing: border-box;
   transition: max-height 0.2s ease;
 
-  ${(p) =>
-    p.isVisible !== true &&
-    css`
-            max-height: 40px;
-            visibility: hidden;
-          `}
   &::-webkit-scrollbar {
     opacity: 1;
   }
 
   &::-webkit-scrollbar-track {
-    background-color: #4b4b4b;
+    background-color: #e8e8e8;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #606060;
+    background-color: #b4b4b4;
   }
+
+  ${(p) =>
+          p.isVisible !== true &&
+          css`
+            max-height: 40px;
+            visibility: hidden;
+          `}
+
 `;
 
 const Overlay = styled.div<{ isVisible: boolean }>`
@@ -115,7 +116,7 @@ const DropdownItem = styled.div<{ active: boolean }>`
   padding: 0.4rem 0.5rem;
   font-size: 0.9rem;
   font-weight: 400;
-  color: #d3d3d3;
+  color: var(--darkgrey);
   cursor: pointer;
 
   ${(p) =>
@@ -126,7 +127,6 @@ const DropdownItem = styled.div<{ active: boolean }>`
           `}
   &:hover, :focus, :focus:hover {
     background-color: dodgerblue;
-    color: #d3d3d3;
     outline: none;
   }
 `;

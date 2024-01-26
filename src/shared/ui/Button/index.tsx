@@ -20,7 +20,8 @@ const Button = styled.button<{
   padding: 5px;
   font-weight: 400;
   border-radius: 12px;
-  max-height: 40px;
+  max-height: ${(p) =>
+          p.size === 'l' ? '50px' : '40px'};
   line-height: 1.5;
   font-size: ${(p) =>
     p.size === 'l' ? '1.5rem' : '1rem'};
@@ -34,7 +35,7 @@ const Button = styled.button<{
   `}
   ${(p) =>
     p.color === 'secondary' && css`
-            color: black;
+            color: var(--darkgrey);
           `}
   ${(p) =>
     p.active && css`
