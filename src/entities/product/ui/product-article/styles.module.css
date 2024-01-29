@@ -1,0 +1,18 @@
+.container {
+	box-shadow: var(--lightgrey) 0 0 10px;
+	padding-bottom: 10px;
+
+}
+.articleButton {
+	cursor: pointer;
+	width: 100%;
+	padding: 10px;
+	border: none;
+	background-color: inherit;
+	font-size: 1.3rem;
+	color: inherit;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 5px 0;
+}

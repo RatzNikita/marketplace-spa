@@ -1,0 +1,30 @@
+.imageContainer {
+	max-width: 570px;
+	height: 400px;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 500px 70px;
+	box-shadow: var(--lightgrey) 0 0 10px;
+	grid-template-rows: auto;
+	justify-content: start;
+	align-content: start;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.imageMain {
+	grid-row: 1/100;
+	object-fit: contain;
+}
+
+
+.image {
+	width: 70px;
+	height: 100px;
+	object-fit: cover;
+	cursor: pointer;
+&.current {
+	 border: dodgerblue 2px solid;
+	 box-sizing: border-box;
+ }
+}

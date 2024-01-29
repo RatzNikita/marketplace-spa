@@ -5,6 +5,7 @@ import store from "./store";
 import Header from "widgets/header";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Products from "pages/products";
+import Product from "../pages/product";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                     <main>
                         <Routes>
                             <Route path={'/products'} element={<Products/>}/>
+                            <Route path={'/product/:id'} element={<Product/>}/>
                         </Routes>
                     </main>
                 </BrowserRouter>
