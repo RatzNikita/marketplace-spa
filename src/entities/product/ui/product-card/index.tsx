@@ -5,12 +5,17 @@ import {ReactComponent as Favorite} from "../../../../shared/images/favorite.svg
 import {Product} from "../../../../shared/api/types";
 
 interface Props {
-    product: Product
+    product: Product,
+    onClick: (product: Product) => void
 }
 
-function ProductCard({product}: Readonly<Props>) {
+function ProductCard({product, onClick}: Readonly<Props>) {
+
+    const handleClickCard = () => {
+        onClick(product)
+    }
     return (
-        <article className={styles.container}>
+        <article className={styles.container} onClick={handleClickCard}>
             <img src={product.thumbnail}
                  alt={product.title}
                  className={styles.image}
