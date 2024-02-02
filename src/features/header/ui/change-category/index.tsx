@@ -2,6 +2,7 @@ import {Catalog} from "../../../../entities/header";
 import {useNavigate} from "react-router-dom";
 import {useAppDispatch} from "../../../../app/store";
 import {setCategory} from "../../../product/model/productSlice";
+import {toggleCatalog} from "../../model/appSlice";
 
 
 function ChangeCategory() {
@@ -11,6 +12,7 @@ function ChangeCategory() {
 
     const handleClick = (category: string) => {
         dispatch(setCategory(category))
+        dispatch(toggleCatalog())
         navigate('/products')
     }
 

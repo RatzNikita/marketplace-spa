@@ -1,5 +1,6 @@
-import {ProductArticle, ProductImages} from "entities/product/ui";
+import {ProductArticle, ProductImages, ProductInfo} from "entities/product/ui";
 import {useAppSelector} from "../../../../app/store";
+import styles from './styles.module.css'
 
 
 function ProductView() {
@@ -8,10 +9,16 @@ function ProductView() {
 
     if (product) {
         return (
-            <section>
-                <ProductImages images={product.images}/>
+            <section className={styles.container}>
+                <div className={styles.info}>
+                    <ProductImages images={product.images}/>
+                    <ProductInfo product={product}/>
+                </div>
                 <ProductArticle title={'AboutProduct'}>
                     <p>{product.description}</p>
+                </ProductArticle>
+                <ProductArticle title={'Reviews'}>
+                    {'reviews'}
                 </ProductArticle>
             </section>
         )
