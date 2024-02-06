@@ -1,11 +1,11 @@
 import styles from './styles.module.css'
 import {useGetProductsQuery} from "app/api";
 import {ProductCard} from "entities/product/ui";
-import {useAppDispatch, useAppSelector} from "../../../../app/store";
-import {Product} from "../../../../shared/api/types";
+import {useAppDispatch, useAppSelector} from "../../../app/store";
+import {Product} from "../../../shared/api/types";
 import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
-import {setCurrentProduct} from "../../../../features/product/model/productSlice";
+import {setCurrentProduct} from "../../../features/product/model/productSlice";
 
 function ProductList() {
 

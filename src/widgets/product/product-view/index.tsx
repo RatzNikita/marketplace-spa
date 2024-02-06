@@ -1,5 +1,5 @@
 import {ProductArticle, ProductImages, ProductInfo} from "entities/product/ui";
-import {useAppSelector} from "../../../../app/store";
+import {useAppSelector} from "../../../app/store";
 import styles from './styles.module.css'
 
 

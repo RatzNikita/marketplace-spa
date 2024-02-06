@@ -1,11 +1,15 @@
 import styles from './styles.module.css'
-import {NavButton} from "entities/header";
 import {AccountNavigation, ChangeCategory, ToggleCatalog} from "features/header";
-import {ReactComponent as ShoppingCart} from "shared/images/shopping_cart.svg";
-import SearchBar from "../../features/header/ui/search";
+import SearchBar from "features/header/ui/search";
+import CartButton from "entities/header/ui/cart-button";
+import {useAppSelector} from "../../app/store";
+import {selectCart} from "../../features/product/model/productSlice";
 
 
 function Header() {
+
+    const cart = useAppSelector(selectCart)
+    const elements = cart.reduce((acc,val) => acc + val.count,0)
 
     return (
         <header className={styles.container}>
@@ -13,9 +17,7 @@ function Header() {
             <nav className={styles.navigation}>
                 <ToggleCatalog/>
                 <SearchBar/>
-                <NavButton to={'/cart'}>
-                    <ShoppingCart/>
-                </NavButton>
+                <CartButton elements={elements}/>
                 <AccountNavigation/>
             </nav>
             <ChangeCategory/>

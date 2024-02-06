@@ -1,4 +1,5 @@
 import Button from "./Button";
 import Select from "./Select";
+import Badge from "./Badge";
 
-export default {Button, Select}
+export default {Badge,Button, Select}

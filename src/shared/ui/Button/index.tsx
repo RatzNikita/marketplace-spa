@@ -17,7 +17,7 @@ const Button = styled.button<{
   border: none;
   color: #4a4a4a;
   margin: 0;
-  padding: 5px;
+  padding: 7px;
   font-weight: 400;
   border-radius: 12px;
   max-height: ${(p) =>
@@ -40,11 +40,9 @@ const Button = styled.button<{
   ${(p) =>
     p.active && css`
             text-decoration: underline;
-    transform: scale(1.05);
           `}
   &:hover {
     color: dodgerblue;
-    transform: scale(1.05);
   }
 `
 
