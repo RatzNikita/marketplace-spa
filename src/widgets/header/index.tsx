@@ -11,6 +11,7 @@ function Header() {
     const cart = useAppSelector(selectCart)
     const elements = cart.reduce((acc,val) => acc + val.count,0)
 
+
     return (
         <header className={styles.container}>
             <h1 className={styles.title}>[Marketplace]</h1>
