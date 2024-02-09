@@ -5,9 +5,9 @@ import {useGetProductsQuery} from "../../app/api";
 
 function Products() {
 
-    const {isLoading} = useGetProductsQuery()
+    const {data} = useGetProductsQuery()
 
-    if(!isLoading) {
+    if(data && data.products.length > 0) {
     return (
         <section className={styles.container}>
             <ProductFilters/>
