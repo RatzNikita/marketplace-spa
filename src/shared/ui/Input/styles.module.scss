@@ -1,0 +1,14 @@
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: space-between;
+  align-items: center;
+
+  label {
+  }
+  input {
+    min-width: 250px;
+  }
+}

@@ -1,0 +1,20 @@
+
+.form {
+  margin: 0 auto;
+
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+  div {
+    font-size: 1rem;
+  }
+
+  h3 {
+    justify-self: start;
+    margin: 50px 0 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+}

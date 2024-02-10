@@ -14,8 +14,21 @@ body {
   margin: 0 auto;
   color: var(--darkgrey)
 }
+
 button {
   font-family: Roboto, sans-serif;
+}
+
+input {
+  outline: none;
+  font-family: Roboto, sans-serif;
+  border: var(--lightgrey) 2px solid;
+  border-radius: 2px;
+  padding: 10px;
+
+  &:focus {
+    border-color: dodgerblue;
+  }
 }
 
 .App {

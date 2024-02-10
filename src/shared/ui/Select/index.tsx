@@ -16,7 +16,6 @@ const SelectContainer = styled.div`
 
 const SelectLabel = styled.p`
   font-weight: 400;
-  font-size: 0.9rem;
   margin: 0;
 `
 
@@ -24,7 +23,6 @@ const SelectLabelButton = styled.button`
   padding: 0.3rem 0.5rem;
   text-align: start;
   min-width: 12rem;
-  font-size: 0.9rem;
   font-weight: 500;
   display: flex;
   align-items: center;
