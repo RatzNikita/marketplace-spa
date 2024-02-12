@@ -2,6 +2,7 @@ import styled, {css} from "styled-components";
 import React, {useState} from "react";
 import {ReactComponent as ExpandMore} from "shared/images/expand-more.svg";
 import {ReactComponent as Close} from "shared/images/close.svg";
+import {UseFormRegisterReturn} from "react-hook-form";
 
 
 const SelectContainer = styled.div`
@@ -17,9 +18,10 @@ const SelectContainer = styled.div`
 const SelectLabel = styled.p`
   font-weight: 400;
   margin: 0;
+  color: var(--midgrey)
 `
 
-const SelectLabelButton = styled.button`
+const SelectLabelButton = styled.button<{open: boolean}>`
   padding: 0.3rem 0.5rem;
   text-align: start;
   min-width: 12rem;
@@ -27,11 +29,11 @@ const SelectLabelButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: end;
-  border: none;
+  box-sizing: border-box;
+  border: ${p => p.open ? '1px solid dodgerblue' : '1px solid var(--lightgrey)'};
   cursor: pointer;
-  box-shadow: 0 0 5px 0 #464646;
   transition: 0.3s ease;
-
+  
   &:hover {
     background-color: #dedede;
   }
@@ -60,7 +62,7 @@ const CloseButton = styled(Close)`
 const DropdownStyle = styled.div<{ isVisible: boolean }>`
   position: absolute;
   z-index: 5;
-  top: 30px;
+  top: 100%;
   right: 0;
   max-height: 20vmax;
   min-width: 12rem;
@@ -164,7 +166,7 @@ function Select({label, values, onChange}: Readonly<Props>) {
         <>
             <SelectContainer>
                 <SelectLabel>{label}</SelectLabel>
-                <SelectLabelButton onClick={handleOpen}>
+                <SelectLabelButton open={open} onClick={handleOpen}>
                     {currentValue !== "" ? currentValue : ''}
                     {currentValue && <CloseButton onClick={handleClean}/>}
                     <SelectLabelArrow open={open}/>

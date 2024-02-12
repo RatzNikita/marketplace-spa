@@ -2,8 +2,9 @@
 
 :root {
   --darkgrey: #444444;
-  --lightpink: #ec5990;
+  --midgrey: #676767;
   --lightgrey: #adadad;
+  --lightpink: #ec5990;
 }
 
 body {
@@ -19,10 +20,10 @@ button {
   font-family: Roboto, sans-serif;
 }
 
-input {
+input, textarea {
   outline: none;
   font-family: Roboto, sans-serif;
-  border: var(--lightgrey) 2px solid;
+  border: var(--lightgrey) 1px solid;
   border-radius: 2px;
   padding: 10px;
 

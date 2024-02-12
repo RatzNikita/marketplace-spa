@@ -35,14 +35,15 @@ const Button = styled.button<{
   `}
   ${(p) =>
     p.color === 'secondary' && css`
-            color: var(--darkgrey);
+    background-color: dodgerblue;
+            color: white;
           `}
   ${(p) =>
     p.active && css`
             text-decoration: underline;
           `}
   &:hover {
-    color: dodgerblue;
+  color: ${p => p.color === 'secondary' ? 'white' : 'dodgerblue'};
   }
 `
 

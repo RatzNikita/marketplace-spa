@@ -7,8 +7,14 @@
   align-items: center;
 
   label {
+    color: var(--midgrey);
+    align-self: start;
   }
   input {
+    min-width: 250px;
+  }
+  textarea {
+    resize: none;
     min-width: 250px;
   }
 }
