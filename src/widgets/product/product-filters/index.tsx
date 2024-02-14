@@ -1,7 +1,5 @@
 import styles from './styles.module.css'
 import SelectProductCategory from "features/product/ui/product-category-selector";
-import Button from "shared/ui/Button";
-import {useGetProductsQuery} from "../../../app/api";
 
 function ProductFilters() {
 

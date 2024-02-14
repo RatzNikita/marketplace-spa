@@ -1,4 +1,3 @@
-import {useGetProductsCategoriesQuery} from "app/api";
 import Select from "shared/ui/Select";
 import {useAppDispatch} from "../../../../app/store";
 import {setCategory} from "../../model/productSlice";
@@ -7,7 +6,7 @@ import {Suspense} from "react";
 
 function SelectProductCategory() {
 
-    const {data} = useGetProductsCategoriesQuery();
+    // const {data} = useGetProductsCategoriesQuery();
     const dispatch = useAppDispatch()
 
     const handleChangeCategory = (filter: string | null) => {
@@ -16,11 +15,11 @@ function SelectProductCategory() {
 
     return (
         <Suspense fallback={'Loading...'}>
-            {data
-                && <Select label={'Category'}
-                           values={data}
-                           onChange={handleChangeCategory}/>
-            }
+            {/*{data*/}
+            {/*    && <Select label={'Category'}*/}
+            {/*               values={data}*/}
+            {/*               onChange={handleChangeCategory}/>*/}
+            {/*}*/}
         </Suspense>
     )
 }

@@ -1,15 +1,16 @@
 import styles from './styles.module.css'
-import {useGetProductsQuery} from "app/api";
 import {ProductCard} from "entities/product/ui";
 import {useAppDispatch, useAppSelector} from "../../../app/store";
 import {Product} from "../../../shared/api/types";
 import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {setCurrentProduct} from "../../../features/product/model/productSlice";
+import {useQuery} from "@apollo/client";
+import {GET_PRODUCTS} from "../../../app/api";
 
 function ProductList() {
 
-    const {data,} = useGetProductsQuery();
+    const {data} = useQuery(GET_PRODUCTS)
     const category = useAppSelector(state => state.product.category)
     const search = useAppSelector(state => state.app.search)
     const navigation = useNavigate()
@@ -18,7 +19,7 @@ function ProductList() {
 
     useEffect(() => {
             setProducts(data?.products.filter(el =>
-                el.title.toLowerCase().includes(search.toLowerCase())
+                el?.title.toLowerCase().includes(search.toLowerCase())
                     ? category
                         ? category === el.category
                         : true
