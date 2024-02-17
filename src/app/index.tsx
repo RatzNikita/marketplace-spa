@@ -7,6 +7,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Products from "pages/products";
 import Product from "../pages/product";
 import CreateProduct from "../pages/product-create";
+import UserProducts from "../pages/user-products";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                             <Route path={'/products'} element={<Products/>}/>
                             <Route path={'/product/:id'} element={<Product/>}/>
                             <Route path={'/create-product'} element={<CreateProduct/>}/>
+                            <Route path={'/my-products'} element={<UserProducts/>}/>
                         </Routes>
                     </main>
                 </BrowserRouter>

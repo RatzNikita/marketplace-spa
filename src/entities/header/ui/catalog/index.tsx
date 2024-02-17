@@ -1,6 +1,9 @@
 import styles from './styles.module.css';
-import {useAppSelector} from "../../../../app/store";
-import Button from "../../../../shared/ui/Button";
+import {useAppSelector} from "app/store";
+import Button from "shared/ui/Button";
+import {useQuery} from "@apollo/client";
+import {getAllCategories} from "app/api";
+import {Category} from "gql/graphql";
 
 interface Props {
     onClick: (category: string) => void
@@ -9,7 +12,7 @@ interface Props {
 function Catalog({onClick}: Props) {
 
     const open = useAppSelector(state => state.app.catalog)
-    const {data} = useGetProductsCategoriesQuery()
+    const {data} = useQuery(getAllCategories)
 
     const handleClick = (category: string) => {
         onClick(category)
@@ -17,13 +20,13 @@ function Catalog({onClick}: Props) {
 
     return (
         <div className={`${styles.container} ${open ? '' : styles.hidden}`}>
-            {data
-                && data.map((category) =>
-                    <Button key={category}
+            {
+                data?.categories.map((category : Category) =>
+                    <Button key={category.id}
                             variant={'text'}
-                            onClick={() => handleClick(category)}
+                            onClick={() => handleClick(category.name)}
                     >
-                        {category}
+                        {category.name}
                     </Button>
                 )
             }

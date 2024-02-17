@@ -3,6 +3,7 @@ import {useNavigate} from "react-router-dom";
 import {useAppDispatch} from "../../../../app/store";
 import {setCategory} from "../../../product/model/productSlice";
 import {toggleCatalog} from "../../model/appSlice";
+import {useState} from "react";
 
 
 function ChangeCategory() {

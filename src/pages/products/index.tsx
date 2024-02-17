@@ -2,13 +2,13 @@ import styles from './styles.module.css'
 import ProductList from "../../widgets/product/product-list";
 import ProductFilters from "../../widgets/product/product-filters";
 import {useQuery} from "@apollo/client";
-import {GET_PRODUCTS} from "../../app/api";
+import {getAllProducts} from "../../app/api";
 
 function Products() {
 
-    const {data} = useQuery(GET_PRODUCTS)
+    const {data} = useQuery(getAllProducts)
 
-    if(data && data.products.length > 0) {
+    if(data?.products && data.products.length > 0) {
     return (
         <section className={styles.container}>
             <ProductFilters/>

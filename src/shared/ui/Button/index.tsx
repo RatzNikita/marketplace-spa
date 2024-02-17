@@ -19,7 +19,7 @@ const Button = styled.button<{
   margin: 0;
   padding: 7px;
   font-weight: 400;
-  border-radius: 12px;
+  border-radius: 2px;
   max-height: ${(p) =>
           p.size === 'l' ? '50px' : '40px'};
   line-height: 1.5;
@@ -27,7 +27,7 @@ const Button = styled.button<{
     p.size === 'l' ? '1.5rem' : '1rem'};
 
   transition: all .2s;
-  box-shadow: #383838 0 0 3px;
+  box-shadow: #383838 0 0 2px;
 
   ${(p) => p.variant === 'text' && css`
     background: none;

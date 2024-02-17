@@ -1,6 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {Product} from "shared/api/types";
-import {RootState} from "../../../app/store";
+import {RootState} from "app/store";
+import {Product} from "gql/graphql";
 
 interface InitialState {
     filters: { [key: string]: string }[],

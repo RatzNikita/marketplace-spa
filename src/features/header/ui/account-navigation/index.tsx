@@ -21,6 +21,14 @@ const optionsStub: { title: string, url: string }[] = [
         title: 'Support',
         url: '/support'
     },
+    {
+        title: 'Add Product',
+        url: '/create-product'
+    }
+    , {
+        title: 'My products',
+        url: '/my-products'
+    }
 ]
 
 function AccountNavigation() {

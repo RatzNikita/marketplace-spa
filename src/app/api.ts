@@ -1,5 +1,7 @@
 import {ApolloClient, InMemoryCache} from "@apollo/client";
-import {gql} from "../__generated__";
+import {graphql} from "gql/";
+
+export const DEFAULT_USER = '6779fab5-0fc0-4fec-9ff7-06050ec99087'
 
 
 const client = new ApolloClient({
@@ -7,19 +9,48 @@ const client = new ApolloClient({
     cache: new InMemoryCache(),
 });
 
-export const GET_PRODUCTS = gql(`
-    query getProducts {
-        products{
+export const getAllProducts = graphql(`
+    query products($id: String) {
+        products(user: $id) {
             id
-            description
             price
-            rating
             title
+            category {
+                name
+            }
+            description
+            images {
+                image
+            }
         }
     }
 `)
 
-export const GET_CATEGORIES = gql(`
-query getCa`)
+export const getAllCategories = graphql(`
+    query categories {
+        categories {
+            id
+            name
+        }
+    }
+`)
+
+export const createProduct  = graphql(`
+    mutation CreateProducts($form: CreateProductInput!) {
+        createProduct(createProductInput: $form) {
+            price
+            id
+            title
+            category {
+                name
+            }
+            description
+            images {
+                image
+            }
+        }
+    }
+`)
+
 
 export default client

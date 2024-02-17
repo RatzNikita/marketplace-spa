@@ -1,17 +1,20 @@
 import {ProductArticle, ProductImages, ProductInfo} from "entities/product/ui";
 import {useAppSelector} from "../../../app/store";
 import styles from './styles.module.css'
+import notFound from 'shared/images/image-not-found.jpg'
+import {getProductImages} from "../../../shared/api/helpers";
 
 
 function ProductView() {
 
     const product = useAppSelector(state => state.product.currentProduct)
 
+
     if (product) {
         return (
             <section className={styles.container}>
                 <div className={styles.info}>
-                    <ProductImages images={product.images}/>
+                    <ProductImages images={getProductImages(product)}/>
                     <ProductInfo product={product}/>
                 </div>
                 <ProductArticle title={'AboutProduct'}>
