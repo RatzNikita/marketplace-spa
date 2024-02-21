@@ -1,7 +1,7 @@
 import styles from './styles.module.scss'
-import Button from "../../../../shared/ui/Button";
-import {ReactComponent as Cart} from "../../../../shared/images/shopping_cart.svg";
-import {ReactComponent as Favorite} from "../../../../shared/images/favorite.svg"
+import Button from "../../../shared/ui/Button";
+import {ReactComponent as Cart} from "../../../shared/images/shopping_cart.svg";
+import {ReactComponent as Favorite} from "../../../shared/images/favorite.svg"
 import {Product} from "gql/graphql";
 import notFound from 'shared/images/image-not-found.jpg'
 

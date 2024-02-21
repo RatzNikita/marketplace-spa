@@ -1,5 +1,5 @@
 import styles from './styles.module.css'
-import {ProductCard} from "entities/product/ui";
+import {ProductCard} from "entities/product";
 import {useAppDispatch, useAppSelector} from "app/store";
 import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";

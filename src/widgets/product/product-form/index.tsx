@@ -2,7 +2,7 @@ import {SubmitHandler, useForm} from "react-hook-form";
 import styles from './styles.module.scss'
 import Input from "shared/ui/Input/input";
 import Button from "shared/ui/Button";
-import ImageUpload from "entities/product/ui/image-button";
+import ImageUpload from "entities/product/image-button";
 import {toBase64} from "shared/api/helpers";
 import {useMutation, useQuery} from "@apollo/client";
 import {createProduct, getAllCategories} from "../../../app/api";

@@ -1,7 +1,7 @@
 import styles from './styles.module.css'
 import {AccountNavigation, ChangeCategory, ToggleCatalog} from "features/header";
 import SearchBar from "features/header/ui/search";
-import CartButton from "entities/header/ui/cart-button";
+import CartButton from "entities/header/cart-button";
 import {useAppSelector} from "../../app/store";
 import {selectCart} from "../../features/product/model/productSlice";
 

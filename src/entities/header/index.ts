@@ -1,5 +1,5 @@
-import NavButton from "./ui/nav-button";
-import Catalog from "./ui/catalog";
-import Account from "./ui/account";
+import NavButton from "./nav-button";
+import Catalog from "./catalog";
+import Account from "./account";
 
 export {NavButton, Account, Catalog}

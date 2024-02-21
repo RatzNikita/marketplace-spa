@@ -1,5 +1,5 @@
 import styles from "./styles.module.css"
-import Button from "../../../../shared/ui/Button";
+import Button from "../../../shared/ui/Button";
 import {NavLink, useLocation} from "react-router-dom";
 import React from "react";
 

@@ -1,4 +1,4 @@
-import UserProductCard from "../../../entities/product/ui/user-product-card";
+import UserProductCard from "../../../entities/product/user-product-card";
 import {useQuery} from "@apollo/client";
 import {DEFAULT_USER, getAllProducts} from "../../../app/api";
 import {getProductImages} from "../../../shared/api/helpers";

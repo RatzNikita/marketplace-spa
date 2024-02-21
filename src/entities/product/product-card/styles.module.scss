@@ -152,7 +152,7 @@ $grey-light: rgba(191, 192, 190, 0.6);
 .buttons {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 10px;
   transition: transform .3s;
 }

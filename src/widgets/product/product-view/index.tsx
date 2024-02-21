@@ -1,7 +1,6 @@
-import {ProductArticle, ProductImages, ProductInfo} from "entities/product/ui";
+import {ProductArticle, ProductImages, ProductInfo} from "entities/product";
 import {useAppSelector} from "../../../app/store";
 import styles from './styles.module.css'
-import notFound from 'shared/images/image-not-found.jpg'
 import {getProductImages} from "../../../shared/api/helpers";
 
 

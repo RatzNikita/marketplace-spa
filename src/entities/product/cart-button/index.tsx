@@ -4,7 +4,7 @@ import {ReactComponent as Add} from "shared/images/add.svg";
 
 
 import styled from "styled-components";
-import Button from "../../../../shared/ui/Button";
+import Button from "../../../shared/ui/Button";
 
 
 const Container = styled.div`

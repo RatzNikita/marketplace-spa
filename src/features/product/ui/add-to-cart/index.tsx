@@ -1,4 +1,4 @@
-import CartButton from "../../../../entities/product/ui/cart-button";
+import CartButton from "../../../../entities/product/cart-button";
 import {useAppDispatch, useAppSelector} from "../../../../app/store";
 import {addToCart, removeFromCart, selectCart, selectCurrentProduct} from "../../model/productSlice";
 import {useMemo} from "react";

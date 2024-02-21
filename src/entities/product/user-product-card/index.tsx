@@ -1,4 +1,4 @@
-import Button from "../../../../shared/ui/Button";
+import Button from "../../../shared/ui/Button";
 import {ReactComponent as Remove} from "shared/images/remove.svg";
 import {ReactComponent as Edit} from "shared/images/edit.svg";
 import {ReactComponent as Delete} from "shared/images/delete.svg";
