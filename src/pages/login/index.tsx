@@ -1,4 +1,4 @@
-import LoginForm from "../../widgets/auth/login-form";
+import LoginForm from "../../features/user/ui/login-form";
 
 function Login() {
 

@@ -1,5 +1,6 @@
 import {ApolloClient, InMemoryCache} from "@apollo/client";
 import {graphql} from "gql/";
+import axios from "axios";
 
 export const DEFAULT_USER = '6779fab5-0fc0-4fec-9ff7-06050ec99087'
 
@@ -8,6 +9,10 @@ const client = new ApolloClient({
     uri: 'http://localhost:3000/graphql',
     cache: new InMemoryCache(),
 });
+
+export const $api = axios.create({
+    baseURL: 'http://localhost:3000',
+})
 
 export const getAllProducts = graphql(`
     query products($id: String) {
