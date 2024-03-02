@@ -1,0 +1,52 @@
+type Product {
+    id: String!
+    title: String!
+    description: String
+    price: Int
+    rating: Int,
+    category: Category!,
+    images: [Image]
+    owner: User
+}
+
+type Category {
+    id: String!,
+    name: String!
+}
+
+type Image {
+    image: String!
+}
+
+input CreateCategoryInput {
+    name: String!
+}
+
+input CreateProductInput {
+    title: String!
+    description: String
+    price: Int
+    category: String
+    imagesB64: [String]
+}
+
+input UpdateProductInput {
+    id: Int!
+    title: String
+    description: String
+    price: Int
+}
+
+type Query {
+    products(user: String): [Product!]
+    product(id: Int!): Product
+    productByCategory(category: String!): [Product!]!
+    categories: [Category!]!
+}
+
+type Mutation {
+    createProduct(createProductInput: CreateProductInput!): Product!
+    updateProduct(updateProductInput: UpdateProductInput!): Product!
+    removeProduct(id: Int!): Product
+    createCategory(createCategoryInput: CreateCategoryInput!): Category!
+}

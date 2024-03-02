@@ -2,11 +2,14 @@
 
 # dependencies
 /node_modules
+/marketplace-backend/node_modules
+/marketplace-backend/dist
 /.pnp
 .pnp.js
 
 # testing
 /coverage
+/dist
 
 # production
 /build
