@@ -13,6 +13,9 @@ function Products() {
         <section className={styles.container}>
             <ProductFilters/>
             <ProductList/>
+            <div>Product</div>
+            <div>Sffff</div>
+            <p>asda</p>
         </section>
     )
     } else {
